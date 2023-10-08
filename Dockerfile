@@ -1,5 +1,5 @@
 #base image
-FROM python:3.9-alpine3.13
+FROM python:3.11-alpine3.15
 #specify the maintainer of the docker file
 LABEL maintainer="Me"
 
