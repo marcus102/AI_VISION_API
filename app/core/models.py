@@ -11,11 +11,11 @@ from django.contrib.auth.models import (
 )
 
 
-def profile_image_file_path(instance, filaname):
+def profile_image_file_path(instance, filename):
   '''Generate file  path for new profile image.'''
-  ext = os.path.splitext(filaname)[1]
-  filaname = f'{uuid.uuid4()}{ext}'
-  return os.path.join('uploads', 'profile', filaname)
+  ext = os.path.splitext(filename)[1]
+  filename = f'{uuid.uuid4()}{ext}'
+  return os.path.join('uploads', 'profile', filename)
 
 
 class UserManager(BaseUserManager):
@@ -161,7 +161,7 @@ class ProfileImage(models.Model):
     settings.AUTH_USER_MODEL,
     on_delete=models.CASCADE,
   )
-  image = models.ImageField(null=True, upload_to=profile_image_file_path)
+  image = models.ImageField(upload_to=profile_image_file_path)
   date = models.DateField(auto_now=True)
 
   def __str__(self):

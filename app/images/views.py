@@ -3,6 +3,7 @@ from core.models import ProfileImage
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from .serializers import ProfileImageSerializer
+from rest_framework.decorators import action
 
 
 class ProfileImageViewSet(viewsets.ModelViewSet):
@@ -23,3 +24,5 @@ class ProfileImageViewSet(viewsets.ModelViewSet):
   def perform_create(self, serializer):
     '''Create a new image.'''
     serializer.save(user=self.request.user)
+  
+
