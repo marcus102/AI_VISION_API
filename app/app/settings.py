@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'support',
     'terms_conditions',
     'images',
-    'image_recognizer',
+    'predictions',
 ]
 
 MIDDLEWARE = [

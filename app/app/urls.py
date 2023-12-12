@@ -40,7 +40,7 @@ urlpatterns = [
     path('api/support/', include('support.urls')),
     path('api/terms_conditions/', include('terms_conditions.urls')),
     path('api/images/', include('images.urls')),
-    path('api/image_recognizer/', include('image_recognizer.urls')),
+    path('api/predictions/', include('predictions.urls')),
 ]
 
 if settings.DEBUG:

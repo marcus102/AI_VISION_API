@@ -1,7 +1,7 @@
 #base image
 FROM python:3.11-alpine3.15
 #specify the maintainer of the docker file
-LABEL maintainer="Me"
+LABEL maintainer="Marcus"
 
 ENV PYTHONUNBUFFERED 1
 

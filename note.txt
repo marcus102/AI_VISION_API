@@ -1,0 +1,6 @@
+Pillow>=9.1.0, <9.2.0
+/py/bin/pip install --upgrade pip && \
+
+/py/bin/pip install --upgrade ultralytics[no-torch] && \
+
+07083766126

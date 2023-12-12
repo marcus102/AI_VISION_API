@@ -1,7 +1,7 @@
 '''URL mappings for the feedback api.'''
 
 from django.urls import path
-from.views import FeedbackViewSet
+from .views import FeedbackViewSet
 
 app_name = 'feedback'
 

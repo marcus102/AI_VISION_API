@@ -23,6 +23,7 @@ class UserAdmin(BaseUserAdmin):
           'date_of_birth',
           'gender',
           'country',
+          'user_status',
         )
       }
     ),
@@ -73,4 +74,4 @@ admin.site.register(models.Assistance)
 admin.site.register(models.Terms)
 admin.site.register(models.Conditions)
 admin.site.register(models.ProfileImage)
-admin.site.register(models.AI_Image)
+admin.site.register(models.Predictions)
