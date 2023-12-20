@@ -7,6 +7,7 @@ from core.models import Terms, Conditions
 
 class ConditionsAPIView(APIView):
   '''Get Terms.'''
+  serializer_class = ConditionsSerializer
   authentication_classes = [authentication.TokenAuthentication]
   permission_classes = [permissions.IsAuthenticated]
 
@@ -18,6 +19,7 @@ class ConditionsAPIView(APIView):
 
 class TermsAPIView(APIView):
   '''Get Conditions.'''
+  serializer_class = TermsSerializer
   authentication_classes = [authentication.TokenAuthentication]
   permission_classes = [permissions.IsAuthenticated]
 

@@ -19,7 +19,8 @@ class TranslationAPITestCase(TestCase):
     mock_translate.return_value.translate.return_value.text = 'Bonjour'
 
     payload = {
-      'text_id': 'id1',
+      'translated_text_id': 'id1',
+      'original_text_id': 's',
       'original_language': 'english',
       'chosen_language': 'french',
       'original_text': 'Hello',

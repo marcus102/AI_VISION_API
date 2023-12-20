@@ -7,6 +7,7 @@ from core.models import Assistance, FrequentlyAskedQuestions
 
 class FAQsListAPIView(APIView):
   '''Get all FAQ.'''
+  serializer_class = FAQsSerializer
   authentication_classes = [authentication.TokenAuthentication]
   permission_classes = [permissions.IsAuthenticated]
 

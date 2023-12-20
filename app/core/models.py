@@ -87,22 +87,8 @@ class Feedback(models.Model):
         return f"{self.stars_count} from {self.user}"
 
 
-class Translation(models.Model):
-    '''Manage translations'''
-
-    text_id = models.CharField(max_length=20)
-    original_language = models.CharField(max_length=50)
-    chosen_language = models.CharField(max_length=50)
-    original_text = models.TextField()
-    translated_text = models.TextField()
-
-    def __str__(self):
-        return f"From {self.original_language} to {self.chosen_language}"
-
-
 class FrequentlyAskedQuestions(models.Model):
     '''Manage FAQ'''
-
     questions = models.TextField()
     answers = models.TextField()
     date = models.DateField(auto_now=True)
@@ -187,4 +173,4 @@ class Predictions(models.Model):
     date = models.DateField(auto_now=True)
 
     def __str__(self):
-        return f"{self.prediction} - {self.date}"
+        return f"{self.prediction} - by {self.user} at {self.date}"

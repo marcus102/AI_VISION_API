@@ -68,7 +68,6 @@ class UserAdmin(BaseUserAdmin):
 admin.site.register(models.User, UserAdmin)
 admin.site.register(models.DeletedAccountFeed)
 admin.site.register(models.Feedback)
-admin.site.register(models.Translation)
 admin.site.register(models.FrequentlyAskedQuestions)
 admin.site.register(models.Assistance)
 admin.site.register(models.Terms)
